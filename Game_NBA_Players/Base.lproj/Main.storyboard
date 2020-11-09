@@ -48,6 +48,21 @@
             </objects>
             <point key="canvasLocation" x="-463.768115942029" y="-38.169642857142854"/>
         </scene>
+        <!--Player Details View Controller-->
+        <scene sceneID="Yzt-yj-HDq">
+            <objects>
+                <viewController storyboardIdentifier="PlayerDetailsViewController" id="6k0-XH-lqH" customClass="PlayerDetailsViewController" customModule="Game_NBA_Players" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bRl-v3-LY4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Glh-K2-iCA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IEg-VB-7C0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="172" y="-38"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
