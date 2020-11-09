@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h9g-1U-Xl4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n2z-8X-Mx1">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -8,7 +8,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Players View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="eRm-ZE-4lf">
+            <objects>
+                <navigationController id="n2z-8X-Mx1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UUW-c1-gIO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="h9g-1U-Xl4" kind="relationship" relationship="rootViewController" id="Go0-Tw-9S6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PZi-Z4-fWG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-384" y="-38"/>
+        </scene>
+        <!--Players-->
         <scene sceneID="sHo-zf-o4S">
             <objects>
                 <viewController id="h9g-1U-Xl4" customClass="PlayersViewController" customModule="Game_NBA_Players" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ViD-Xx-tGQ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerCell" id="kNP-PZ-d0b">
@@ -31,6 +47,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="h9g-1U-Xl4" id="BvJ-kY-cMh"/>
+                                    <outlet property="delegate" destination="h9g-1U-Xl4" id="zHc-Ze-KAe"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -43,10 +60,11 @@
                             <constraint firstItem="ViD-Xx-tGQ" firstAttribute="top" secondItem="KtP-Os-Lri" secondAttribute="top" id="jC8-pa-IWc"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Players" id="HNJ-e8-uvQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="erS-cL-E7V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-463.768115942029" y="-38.169642857142854"/>
+            <point key="canvasLocation" x="294" y="-38"/>
         </scene>
         <!--Player Details View Controller-->
         <scene sceneID="Yzt-yj-HDq">
@@ -61,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IEg-VB-7C0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="172" y="-38"/>
+            <point key="canvasLocation" x="968" y="-38"/>
         </scene>
     </scenes>
     <resources>

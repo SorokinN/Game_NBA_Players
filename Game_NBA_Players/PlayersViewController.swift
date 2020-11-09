@@ -7,12 +7,11 @@
 
 import UIKit
 
-class PlayersViewController: UIViewController, UITableViewDataSource {
+class PlayersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -24,5 +23,11 @@ class PlayersViewController: UIViewController, UITableViewDataSource {
         cell.textLabel?.text = "Player \(indexPath.row)"
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        let playersDetailViewController = storyboard.instantiateViewController(identifier: "PlayerDetailsViewController")
+        
+        navigationController?.pushViewController(playersDetailViewController, animated: true)
+        
+    }
 }
