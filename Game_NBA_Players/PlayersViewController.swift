@@ -19,7 +19,10 @@ class PlayersViewController: UIViewController, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerCell", for: indexPath)
+        
+        cell.textLabel?.text = "Player \(indexPath.row)"
+        return cell
     }
     
 }
